@@ -1,0 +1,61 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	background: url(question-mark.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+h1 {
+	font: bold 120px/.25 'Helvetica Neue', sans-serif ;
+	color: #3D9970;
+	text-align: center;
+}
+.inner-box {
+	background-color: #fefefa;
+	height: 400px;
+	width: 300px;
+	margin: 5% auto 10% auto;
+	z-index: 1;
+	border: 2px solid #39CCCC;
+	border-radius: 25px;
+	padding: 20px;
+	font: 16px 'Helvetica Neue', sans-serif;
+}
+form {
+	text-align: center;
+	padding-top: 60px;
+}
+input[type="text"] {
+	width: 60px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
+	border: 1px solid #39CCCC;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 5px;
+	padding: 5px;
+}
+input[type="submit"] {
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #ff8500;
+	color: #fff;
+	box-shadow: 1px 1px 4px #dadada;
+	border-radius: 5px;
+	width: 90px;
+	height: 30px;
+	font-size: 80%;
+}
+input[value="Guess"] {
+	background: #39CCCC;;
+}
+form p {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
