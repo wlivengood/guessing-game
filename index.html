@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="jquery.min.js"></script>
+<script src="guessingGame.js"></script>
+</head>
+<body>
+	<header>
+	<h1>Guessing Game</h1>
+	</header>
+	<div class="inner-box">
+		<form onsubmit="startGame(event)">
+			I'm thinking of a number...<br>
+			<input type="text" id="input" autocomplete="off" placeholder="1 - 100"><br>
+			<input type="submit" id="button" class="button" value="Guess"><br>
+			<input type="button" id="hint-button" class="button" onclick = "getHint()" value="Give me a hint!"><br>
+			<p id="result"></p>
+			<p id="guesses"></p>
+			<p id="hint"></p>
+			<input type="button" id="reset" class="button" onclick="resetGame()" value="Reset">
+		</form>
+	</div>
+</body>
+</html>
