@@ -8,8 +8,11 @@ html {
 }
 body {
 	min-height: 100%;
-	background: url(question-mark.jpg) no-repeat center center fixed;
+	background: url(images/question-mark.jpg) no-repeat center center fixed;
 	background-size: cover;
+}
+p {
+	font-size: 12px;
 }
 h1 {
 	font: bold 120px/.25 'Helvetica Neue', sans-serif ;
@@ -22,7 +25,7 @@ h1 {
 	width: 300px;
 	margin: 5% auto 10% auto;
 	z-index: 1;
-	border: 2px solid #39CCCC;
+	border: 2px solid #3D9970;
 	border-radius: 25px;
 	padding: 20px;
 	font: 16px 'Helvetica Neue', sans-serif;
@@ -36,12 +39,12 @@ input[type="text"] {
 	margin-top: 15px;
 	margin-bottom: 10px;
 	text-align: center;
-	border: 1px solid #39CCCC;
+	border: 1px solid #3D9970;
 	box-shadow: 1px 1px 4px #EBEBEB;
 	border-radius: 5px;
 	padding: 5px;
 }
-input[type="submit"] {
+.button {
 	border: none;
 	padding: 8px 15px 8px 15px;
 	background: #ff8500;
@@ -53,9 +56,31 @@ input[type="submit"] {
 	font-size: 80%;
 }
 input[value="Guess"] {
-	background: #39CCCC;;
+	background: #3D9970;
+}
+#hint-button {
+	width: 130px;
+	background: #3D9970;
+}
+#button {
+	width: 130px;
+	background: #3D9970;
 }
 form p {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.win-text {
+	color: #3D9970;
+	font-size: 40px;
+}
+.lose-text {
+	color: red;
+	font-size: 40px;
+}
+.win-background {
+	background: url(images/winBackground.png) no-repeat center center fixed;
+}
+.lose-background {
+	background: url(images/loseBackground.jpg) no-repeat center center fixed;
 }
