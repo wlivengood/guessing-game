@@ -113,7 +113,7 @@ function resetGame() {
 function startGame(event) {
 	event.preventDefault();
 	var playersGuess = +$('#input').val();
-	valid = validateGuess(playersGuess);
+	var valid = validateGuess(playersGuess);
 	if (valid) {
 		checkGuess(playersGuess, winningNumber, guesses);
 		guessesLeft(guesses);
