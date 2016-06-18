@@ -48,31 +48,28 @@ function checkGuess(guess, winner, list){
 	if (isDuplicate)
 		message = "Duplicate Guess!"
 	else {
-		if (isValid) {
-			list.push(guess);
-			var result = lowerOrHigher(guess, winner)
-			if (result == "win") {
-				$('#result').text("You won!");
-				$('#result').addClass("win-text");
-				$('body').addClass("win-background");
-				hideAll();
-				return false;
-			}
-			var temp = hotOrCold(guess, winner);
-			message = result + temp;
-			}
+		list.push(guess);
+		var result = lowerOrHigher(guess, winner)
+		if (result == "win") {
+			$('#result').text("You won!");
+			$('#result').addClass("win-text");
+			$('body').addClass("win-background");
+			hideAll();
+			return false;
+		}
+		var temp = hotOrCold(guess, winner);
+		message = result + temp;
 	}
 	$('#result').text(message);
 }
 
 function validateGuess(guess) {
-	if (typeof guess !== 'number') {
-		console.log("Must be a number!");
-		console.log(typeof guess);
+	if (isNaN(guess)) {
+		$('#result').text("Must be a number!");
 		return false;
 	}
 	if (guess < 1 || guess > 100) {
-		console.log("Must be between 1 and 100!");
+		$('#result').text("Must be between 1 and 100!");
 		return false;
 	}
 	return true;
@@ -116,7 +113,10 @@ function resetGame() {
 function startGame(event) {
 	event.preventDefault();
 	var playersGuess = +$('#input').val();
-	checkGuess(playersGuess, winningNumber, guesses);
-	guessesLeft(guesses);
+	valid = validateGuess(playersGuess);
+	if (valid) {
+		checkGuess(playersGuess, winningNumber, guesses);
+		guessesLeft(guesses);
+	}
 	$('#input').val("");
 };
