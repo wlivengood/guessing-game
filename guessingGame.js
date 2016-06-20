@@ -42,9 +42,11 @@ function checkDuplicate(guess, list) {
 }
 
 function checkGuess(guess, winner, list){
-	var message;
-	isDuplicate = checkDuplicate(guess, list);
+	// you can declare multiple variables at once by chaining them with a comma.
+	var message,
+	isDuplicate = checkDuplicate(guess, list),
 	isValid = validateGuess(guess);
+	
 	if (isDuplicate)
 		message = "Duplicate Guess!"
 	else {
@@ -111,6 +113,7 @@ function resetGame() {
 }
 
 function startGame(event) {
+	// great use of preventDefault!
 	event.preventDefault();
 	var playersGuess = +$('#input').val();
 	var valid = validateGuess(playersGuess);
